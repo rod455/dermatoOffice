@@ -13,7 +13,9 @@ especialista; o jogo não é gerar lead, é **utilização da agenda** e
 
 | Doc | O que tem |
 |-----|-----------|
-| [`docs/plano-de-negocio.md`](docs/plano-de-negocio.md) | Modelo econômico, unit economics, fases, riscos e divisão de papéis |
+| [`docs/plano-de-negocio.md`](docs/plano-de-negocio.md) | Modelo econômico, unit economics, fases, riscos, papéis e distribuição 65/35 |
+| [`docs/plano-de-inicio.md`](docs/plano-de-inicio.md) | Passo a passo pra começar, com estimativas de custo (sala, WhatsApp, etc.) |
+| [`docs/plataforma-medico.md`](docs/plataforma-medico.md) | Plataforma do médico + CRM e a evolução com voz/foto/preenchimento assistido |
 | [`docs/automacao-whatsapp.md`](docs/automacao-whatsapp.md) | Arquitetura do agendamento automatizado no WhatsApp |
 | [`docs/marketing-e-compliance.md`](docs/marketing-e-compliance.md) | Marketing orgânico, ads e as regras de CFM/LGPD que não dá pra ignorar |
 | [`docs/checklist-30-60-90.md`](docs/checklist-30-60-90.md) | O que fazer nos primeiros 90 dias, em ordem |

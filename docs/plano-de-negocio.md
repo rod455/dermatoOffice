@@ -85,7 +85,7 @@ operadoras. Já se paga com folga.
    todas as especialidades. É o "aposentar antes da Copa" — mas é também onde
    moram os riscos de compliance (ver seção 6 e o doc de marketing).
 
-## 5. Divisão de papéis (o ponto que você levantou)
+## 5. Divisão de papéis e distribuição
 
 Você foi direto: você e a Bianca batem cabeça no "estratégico", e pra funcionar
 você precisa ficar de fora dessas discussões. Faz sentido, e dá pra desenhar:
@@ -93,15 +93,28 @@ você precisa ficar de fora dessas discussões. Faz sentido, e dá pra desenhar:
 - **Bianca — dona do clínico e da experiência do paciente.** Agenda, tipos de
   procedimento, qualidade do atendimento, decisão de o que oferecer a quem.
   Ela é a marca e o produto.
-- **Você — dono do capital e da infra.** Paga o aluguel fixo de saída (risco
-  controlado: R$1.000/mês que se autopaga rápido), banca a estrutura e destrava
-  recursos. Fica **fora** da mesa estratégica do dia a dia.
-- **Eu (Claude) / a automação — o operacional que não briga.** Agendamento,
-  follow-up, remarketing, relatórios. A camada neutra que tira do meio de vocês
-  dois as decisões repetitivas que viram atrito.
+- **AppFactory — responsável pela operação, tecnologia e capital.** Banca a
+  estrutura (aluguel fixo de saída, plataforma, marketing), constrói e mantém o
+  sistema (plataforma do médico + automação de WhatsApp), e assume o risco
+  financeiro. Fica **fora** da mesa clínica e do dia a dia estratégico do
+  atendimento.
+- **A automação — o operacional que não briga.** Agendamento, follow-up,
+  remarketing, relatórios, CRM. A camada neutra que tira do meio decisões
+  repetitivas que viram atrito.
+
+### Distribuição dos lucros — proposta final: **65% / 35%**
+
+- **Bianca — 65% do lucro.** Ela gera a receita e é a marca.
+- **AppFactory — 35% do lucro.** Responsável por capital, tecnologia e operação.
+
+**Lucro = receita − custos** (aluguel, plataforma/APIs, marketing, taxas das
+operadoras, impostos). Os custos saem primeiro, do topo; o que sobra é dividido
+65/35. Isso alinha os dois lados no mesmo incentivo: crescer receita e segurar
+custo. A AppFactory só ganha se a operação der lucro de verdade — não é taxa
+sobre faturamento, é participação no resultado.
 
 A sacada aqui é que **quanto mais coisa a automação decide por regra, menos
-superfície de conflito** sobra entre você e a Bianca. O sistema vira o
+superfície de conflito** sobra entre as partes. O sistema vira o
 "terceiro sócio sem ego".
 
 ## 6. Riscos que eu não deixaria passar
