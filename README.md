@@ -18,6 +18,7 @@ especialista; o jogo não é gerar lead, é **utilização da agenda** e
 | [`docs/plataforma-medico.md`](docs/plataforma-medico.md) | Plataforma do médico + CRM e a evolução com voz/foto/preenchimento assistido |
 | [`docs/automacao-whatsapp.md`](docs/automacao-whatsapp.md) | Arquitetura do agendamento automatizado no WhatsApp |
 | [`docs/marketing-e-compliance.md`](docs/marketing-e-compliance.md) | Marketing orgânico, ads e as regras de CFM/LGPD que não dá pra ignorar |
+| [`docs/mercado-e-localizacao.md`](docs/mercado-e-localizacao.md) | Mercado de dermato em SP e como a localização impacta o fluxo (onde procurar sala) |
 | [`docs/checklist-30-60-90.md`](docs/checklist-30-60-90.md) | O que fazer nos primeiros 90 dias, em ordem |
 | [`docs/estrutura-e-experiencia.md`](docs/estrutura-e-experiencia.md) | **Doc pra Bianca ler** — estrutura de gestão, visão do médico e visão do cliente |
 
