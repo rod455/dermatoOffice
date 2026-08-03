@@ -90,6 +90,69 @@ Dois modelos possíveis:
   normal do WhatsApp. Se o número comercial já é usado no app, ou se migra ele
   pra API, ou usa um número separado pra automação.
 
+## Cenário: alugar sala "com estrutura de consultório" em Vila Mariana
+
+A ideia é boa (Vila Mariana é a região que eu recomendaria pra fase 1), mas tem
+uma armadilha na frase "não vamos ter licença sanitária". Duas fontes deixam
+claro:
+
+> **A licença sanitária do locador NÃO é "aproveitável" pelo locatário pessoa
+> jurídica — a PJ precisa de licença própria.** E cada profissional que atua num
+> estabelecimento precisa estar **vinculado ao CNES** daquele estabelecimento.
+
+Ou seja: **estrutura física (sala, maca, pia) ≠ estabelecimento de saúde
+regularizado.** Ter os móveis de consultório não substitui licença + CNES. Não
+dá pra "usar a licença do prédio" operando como PJ. Isso muda os caminhos:
+
+### Caminho A — coworking que opera COMO o estabelecimento (turnkey)
+Alguns coworkings médicos **são** o estabelecimento de saúde: têm CNES + licença
+sanitária próprios, e os médicos atuam **vinculados ao CNES deles**. Nesse
+modelo é possível **não ter licença própria** — mas só se você atua como
+profissional vinculada ao estabelecimento deles, não como PJ locatária
+independente. **É esse o modelo a procurar.** Perguntas obrigatórias antes de
+assinar:
+- Vocês têm **CNES e licença sanitária ativos** neste endereço?
+- Posso ser **vinculada ao CNES de vocês** como profissional?
+- Como fica o **credenciamento dos planos** — pela minha PJ ou como pessoa
+  física vinculada ao estabelecimento de vocês?
+
+### Caminho B — você opera como sua própria PJ na sala
+Aí **precisa de licença sanitária própria + CNES próprio** no endereço. A licença
+do locador não vale pra sua PJ. Ou seja, "não ter licença" **não é opção** nesse
+caminho.
+
+### ⚠️ A armadilha do procedimento (isso afeta a receita de vocês)
+A licença/CNES do estabelecimento tem **classificação por tipo de procedimento**:
+- **Grupo 1** — só consulta, sem procedimento.
+- **Grupo 2** — procedimento **sem** anestesia local (peeling, toxina,
+  preenchimento, crioterapia, cauterização, laser).
+- **Tipo II (mais alto)** — procedimento cirúrgico de pequeno porte **com
+  anestesia local**.
+
+**Biópsia e retirada de pinta usam anestesia local → exigem o nível mais alto
+(Tipo II).** Muito coworking é licenciado **só pra consulta** (Grupo 1). Se for
+o caso, você poderia atender consulta e alguns procedimentos estéticos, mas
+**não** faria biópsia/exérese ali — que é justamente o upside de receita e o que
+a Bianca curte fazer. **Confirmar que o estabelecimento é licenciado pro nível
+de procedimento que ela vai realizar** é tão importante quanto a licença existir.
+
+### O que confirmar na sala de Vila Mariana antes de assinar
+1. É um **estabelecimento de saúde regularizado** (tem CNES + licença sanitária
+   próprios), ou é só uma sala com móveis de consultório?
+2. A **licença cobre procedimento com anestesia local** (biópsia, exérese —
+   Tipo II)? Ou só consulta?
+3. Posso ser **vinculada ao CNES deles** (caminho A) ou vou precisar de licença
+   e CNES próprios (caminho B)?
+4. O **credenciamento dos planos** pela minha PJ é viável nesse endereço?
+5. Independência estrutural/funcional da sala (a VISA exige ambiente
+   individualizado).
+
+> **Resumo do cenário:** "não ter licença sanitária" só funciona no **caminho
+> A** (coworking que já é o estabelecimento e te vincula ao CNES dele) **e** se a
+> licença dele cobrir os procedimentos da Bianca. Fora disso, como PJ, a licença
+> própria é obrigatória. Vale confirmar tudo isso com o coworking **e** com a
+> Vigilância Sanitária de SP — as regras são municipais e a interpretação varia.
+
 ## O que já está resolvido (a favor de vocês)
 
 - ✅ **PJ registrada** (CRM-MG) — falta só a adequação pra SP.
