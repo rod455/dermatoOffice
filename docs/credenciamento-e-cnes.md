@@ -187,6 +187,75 @@ leva por atendimento. Ver [`plano-de-negocio.md`](plano-de-negocio.md) seção 2
 secretária, materiais de procedimento — pergunte o que está **incluído no
 aluguel** e o que é cobrado à parte.
 
+## Quanto custa a licença sanitária em SP?
+
+Depende da **classificação de risco** da atividade — e, no modelo coworking, na
+prática pode **não ser um custo separado seu**:
+
+| Classificação | Custo/processo |
+|---|---|
+| **Risco I (Baixo)** — ex.: consultório só de consulta | **Isento de licença** — só cadastro/autodeclaração no CEVS (Cadastro Estadual de Vigilância Sanitária) |
+| **Médio risco** — procedimento de pequeno porte | Licenciamento **simplificado e automático** pelo Portal Integrador Estadual (gera o CLI, equivalente à licença) — taxa baixa ou isenta |
+| **Alto risco** | Protocolo direto na Vigilância + vistoria |
+
+**Procedimento com anestesia local (biópsia, exérese)** sobe a classificação
+pra médio/alto — não é baixo risco. Então o estabelecimento precisa estar
+licenciado nesse nível (o ponto que já levantamos).
+
+> **No caminho coworking (o de vocês):** a licença é do **estabelecimento
+> (coworking)**, não sua. Você não paga uma licença separada — ela está
+> **embutida no que o coworking cobra**, desde que ele seja o estabelecimento
+> licenciado **e** a licença cubra o nível de procedimento da Bianca. Por isso a
+> pergunta "a licença de vocês cobre biópsia/anestesia local?" vale ouro: é a
+> diferença entre pagar R$0 a mais e ter que montar estrutura própria.
+
+Se em algum momento vocês forem pra CNES/licença próprios (PJ locatária), o
+custo tende a ser **baixo** (isento a poucas centenas de reais/ano, dado o
+regime de risco simplificado de SP) — mas o "custo" real vira **processo e
+vistoria**, não a taxa. Valor exato: confirmar com a **COVISA** (Av. Dr. Arnaldo
+351, tel. 11 3065-4600).
+
+## Próximos passos — caminho coworking (decidido)
+
+### A. Regulatório e fiscal (caminho crítico — começa já)
+1. **CREMESP** — inscrição secundária da Bianca + adequação da **PJ** pra operar
+   em SP (pedir o **Certificado de Regularidade no CRM-MG**). É o gargalo; RQE +
+   Título destravam o credenciamento depois.
+2. **Inscrição Municipal (CCM) na Prefeitura de SP** — pra emitir nota fiscal de
+   serviço e recolher **ISS** em SP (a PJ é de MG). Confirmar com o contador.
+3. **Fechar o coworking em Vila Mariana** — assinar só depois de confirmar:
+   têm **CNES + licença próprios**? A licença **cobre procedimento com anestesia
+   local** (biópsia/exérese)? **Te vinculam ao CNES** deles? **Suporta plano**?
+   O que está **incluso no aluguel** (adesão, limpeza, secretária, materiais)?
+4. **Vínculo ao CNES** do estabelecimento — RT/vínculo, com o **telefone
+   comercial** como contato.
+5. **Licença sanitária** — confirmada como do estabelecimento (coworking),
+   cobrindo o nível de procedimento. Sem custo separado no caminho A.
+6. **Credenciar nos planos** (SulAmérica, Bradesco) — com CREMESP + CNPJ + CNES
+   + vínculo.
+
+### B. Operação e tecnologia (AppFactory — em paralelo, ao fechar o endereço)
+7. **Telefone comercial** — decidir se vira o número da **API oficial do
+   WhatsApp** (não pode estar no app normal ao mesmo tempo) ou usar um separado.
+8. **LP Bianca Dermato** + **Google Business Profile** (grátis, essencial pra
+   busca local) + Instagram profissional.
+9. **Sistema de agendamento + WhatsApp oficial** (confirmação, lembrete, encaixe,
+   retorno de procedimento).
+10. **Plataforma do médico + CRM v1** (agenda, ficha, CRM; voz/foto na evolução).
+11. **LGPD** — termo de consentimento + **opt-in** no fluxo de agendamento desde
+    o dia 1 + política de privacidade.
+12. **Gateway de pagamento** pro particular (Pix/cartão).
+
+### C. Go-live
+13. **Semanas de operação manual** — observar padrões reais (no-show, tipos de
+    mensagem) antes de automatizar.
+14. **Ativar a automação** — confirmação/lembrete, fila de encaixe, retorno de
+    procedimento; depois, com opt-in, reativação.
+
+> **Os dois que começam hoje, em paralelo:** CREMESP (item 1) e a escolha do
+> coworking (item 3). Eles destravam CNES → credenciamento. O resto encaixa
+> atrás.
+
 ## O que já está resolvido (a favor de vocês)
 
 - ✅ **PJ registrada** (CRM-MG) — falta só a adequação pra SP.
