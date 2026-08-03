@@ -15,6 +15,7 @@ especialista; o jogo não é gerar lead, é **utilização da agenda** e
 |-----|-----------|
 | [`docs/plano-de-negocio.md`](docs/plano-de-negocio.md) | Modelo econômico, unit economics, fases, riscos, papéis e distribuição 65/35 |
 | [`docs/plano-de-inicio.md`](docs/plano-de-inicio.md) | Passo a passo pra começar, com estimativas de custo (sala, WhatsApp, etc.) |
+| [`docs/credenciamento-e-cnes.md`](docs/credenciamento-e-cnes.md) | Caminho regulatório: CRM-SP (a PJ é de MG), licença sanitária, CNES e credenciamento |
 | [`docs/plataforma-medico.md`](docs/plataforma-medico.md) | Plataforma do médico + CRM e a evolução com voz/foto/preenchimento assistido |
 | [`docs/automacao-whatsapp.md`](docs/automacao-whatsapp.md) | Arquitetura do agendamento automatizado no WhatsApp |
 | [`docs/marketing-e-compliance.md`](docs/marketing-e-compliance.md) | Marketing orgânico, ads e as regras de CFM/LGPD que não dá pra ignorar |
