@@ -107,6 +107,64 @@ O painel da Bianca (agenda, ficha, CRM, anotação por voz/foto). Detalhes em
 - **Semanas de operação manual** antes de automatizar — pra observar padrões
   reais de no-show e mensagem e automatizar o que importa.
 
+## Estimativa da primeira etapa (caminho coworking)
+
+Valores de mercado / oficiais (2026), pra dimensionar o caixa necessário até o
+**go-live** (regularizar → credenciar → começar a faturar pelo plano).
+
+### Custos únicos (setup regulatório)
+| Item | Estimativa |
+|------|-----------|
+| Certificado de Regularidade no CRM-MG | R$0–100 |
+| Taxa de inscrição secundária (PF) no CREMESP | **R$135** |
+| Registro/adequação da PJ no CREMESP (taxa) | ~R$135 |
+| CCM (inscrição municipal SP), CNES | **grátis** |
+| Licença sanitária (é do coworking) | **R$0** |
+| **Subtotal setup** | **~R$270–370** |
+| Equipamento de procedimento (só se o coworking não fornecer) | R$1.500–8.000 *(condicional)* |
+
+### Anuidades em SP (custo novo por operar em SP — anual)
+Como é inscrição **secundária**, paga-se anuidade **também** em SP (a de MG
+continua):
+| Item | Estimativa/ano |
+|------|-----------|
+| Anuidade pessoa física — CREMESP | ~R$948 |
+| Anuidade pessoa jurídica — CREMESP | ~R$190 (com desconto de 80%, se elegível) a R$948 |
+| **Subtotal anuidades SP** | **~R$1.140–1.900/ano** (~R$95–160/mês diluído) |
+
+### Recorrente mensal (fase ramp-up)
+| Item | Estimativa/mês |
+|------|-----------|
+| Coworking Vila Mariana (fixo + hora, ramp-up) | R$700–1.200 |
+| Contador (Simples) | R$300–600 |
+| WhatsApp (mensagens Meta) | R$50–150 |
+| Domínio + hosting | R$50–150 |
+| Anuidades CREMESP (diluídas) | R$95–160 |
+| **Total recorrente inicial** | **~R$1.195–2.260/mês** |
+
+### Construção do sistema (AppFactory, one-time)
+LP + agendamento + WhatsApp oficial + plataforma do médico/CRM — **feito
+in-house pela AppFactory**, não sai do caixa da operação. (Referência de mercado,
+se fosse terceirizado: R$15k–50k — daí a AppFactory absorver isso ser parte do
+valor dos 35%.)
+
+### 💰 Caixa necessário pra chegar ao go-live
+O credenciamento leva semanas e a receita entra em rampa, então o que importa é
+o **fôlego** até faturar:
+
+> **Setup (~R$300) + 2 a 3 meses de recorrente (~R$2.400–6.800) ≈ R$2.700–7.100**,
+> sem equipamento. Com equipamento de procedimento e uma margem de segurança:
+> **~R$5.000–15.000**.
+
+Lembrando que a saída de caixa de risco que você topou (aluguel parado) é o
+**recorrente**, e o cenário conservador (só consulta de plano) já projeta
+**~R$4.600/mês de margem** — ou seja, a partir do go-live o recorrente se paga e
+o caixa inicial é reposto rápido.
+
+**As três variáveis que mais mexem no número:** (1) modelo do coworking
+escolhido, (2) se precisa comprar equipamento, (3) se a PJ pega o desconto de
+80% na anuidade.
+
 ## Resumo de investimento
 
 **Custos recorrentes (mês), fase inicial:**
