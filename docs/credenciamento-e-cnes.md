@@ -153,6 +153,40 @@ de procedimento que ela vai realizar** é tão importante quanto a licença exis
 > própria é obrigatória. Vale confirmar tudo isso com o coworking **e** com a
 > Vigilância Sanitária de SP — as regras são municipais e a interpretação varia.
 
+## Coworking: dá pra atender plano? Pago aluguel ou comissão?
+
+**Dá pra participar de planos, sim.** O credenciamento é entre **você (ou sua
+PJ) e a operadora** — não é o coworking que te credencia. Pontos confirmados:
+- **Sem exclusividade e sem limite** — pode se credenciar em quantos planos
+  quiser, e atender **plano e particular ao mesmo tempo**.
+- O coworking entra só como **domicílio fiscal/endereço regularizado** (CNES +
+  licença) que viabiliza o credenciamento. Valem as ressalvas das seções acima
+  (CNES vinculado, licença cobrindo procedimento).
+- **Ressalva:** nem todo coworking é montado pra plano — muitos focam em
+  particular. Confirmar que aquele endereço **suporta atendimento por convênio**.
+
+**Aluguel ou comissão? São dois modelos diferentes — não confunda:**
+
+| | **Coworking (aluguel)** | **Clínica com repasse (comissão)** |
+|---|---|---|
+| O que você paga | **pelo espaço** (hora, período, dia, pacote mensal, créditos) | **% do que fatura** (ex.: os 50% do primeiro dia da Bianca) |
+| Quanto você fica do plano/particular | **100%** | o que sobra depois do corte da clínica |
+| Custo | **fixo/previsível** | variável, cresce com seu faturamento |
+| É coworking? | **sim** | **não** — é clínica parceira/repasse |
+
+> **Coworking de verdade = só aluguel.** Você fica com **100%** do que o plano
+> ou o particular paga; o coworking não toca nesse dinheiro. A **comissão/repasse
+> (50%)** é o modelo da clínica onde ela atendeu — **não** é coworking. Alguns
+> lugares misturam (aluguel + taxa), então **confirme no contrato**.
+
+Isso é o coração da economia do projeto: trocar "dividir 50% pra sempre" (repasse)
+por "pagar aluguel fixo" (coworking) é o que praticamente **dobra** o que a Bianca
+leva por atendimento. Ver [`plano-de-negocio.md`](plano-de-negocio.md) seção 2.
+
+**Fique de olho (mesmo sem comissão):** taxas extras de adesão, limpeza,
+secretária, materiais de procedimento — pergunte o que está **incluído no
+aluguel** e o que é cobrado à parte.
+
 ## O que já está resolvido (a favor de vocês)
 
 - ✅ **PJ registrada** (CRM-MG) — falta só a adequação pra SP.
