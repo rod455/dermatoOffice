@@ -5,10 +5,10 @@
   COMO USAR: troque todos os campos entre {{CHAVES}} e os blocos [PLACEHOLDER].
   Lista do que preencher depois (fotos, currículo, dados):
 
-    {{NOME_COMPLETO}}        -> ex.: Dra. Bianca Souza
+    Dra. Bianca Souza        -> ex.: Dra. Bianca Souza
     {{CRM}}                  -> ex.: CRM-SP 123456   (obrigatório p/ CFM)
     {{RQE}}                  -> ex.: RQE 45678       (obrigatório p/ especialista)
-    {{WHATSAPP_NUM}}         -> só dígitos, ex.: 5511999999999  (telefone comercial)
+    553182187822         -> só dígitos, ex.: 5511999999999  (telefone comercial)
     {{INSTAGRAM_USER}}       -> ex.: dra.biancaderm
     {{ENDERECO}}             -> ex.: Rua X, 000 - Vila Mariana, São Paulo/SP
     {{ANOS_EXPERIENCIA}}     -> ex.: 8
@@ -183,7 +183,7 @@
 <!-- ===================== HEADER ===================== -->
 <header>
   <div class="wrap nav">
-    <div class="brand">{{NOME_COMPLETO}}<small>Dermatologia</small></div>
+    <div class="brand">Dra. Bianca Souza<small>Dermatologia</small></div>
     <nav class="menu">
       <a href="#sobre">Sobre</a>
       <a href="#tratamentos">Tratamentos</a>
@@ -191,7 +191,7 @@
       <a href="#faq">Dúvidas</a>
       <a href="#local">Localização</a>
     </nav>
-    <a class="btn btn-wa" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+    <a class="btn btn-wa" href="https://wa.me/553182187822?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
       <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
       Agendar
     </a>
@@ -206,7 +206,7 @@
       <h1 class="serif">Cuidado com a sua pele, <em>do clínico ao estético</em>, com quem entende.</h1>
       <p class="lead">Dermatologia clínica, cirúrgica e estética em São Paulo. Atendimento humano, agenda organizada e agendamento fácil pelo WhatsApp — por convênio ou particular.</p>
       <div class="hero-cta">
-        <a class="btn btn-wa" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+        <a class="btn btn-wa" href="https://wa.me/553182187822?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
           <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
           Agendar pelo WhatsApp
         </a>
@@ -215,12 +215,14 @@
       <div class="trust">
         <div><b>Título</b>de especialista (SBD)</div>
         <div><b>RQE</b>registro de qualificação</div>
-        <div><b>+{{ANOS_EXPERIENCIA}}</b>anos de experiência</div>
+        <!-- TODO: reativar quando tivermos o dado real
+        <div><b>+{{ANOS_EXPERIENCIA}}</b>anos de experiência</div> -->
+        <div><b>SP</b>atendimento em São Paulo</div>
       </div>
     </div>
     <div>
       <div class="hero-photo">
-        <span>[FOTO_HERO]<br>retrato da {{NOME_COMPLETO}}<br>(alta qualidade, vertical)</span>
+        <span>[FOTO_HERO]<br>retrato da Dra. Bianca Souza<br>(alta qualidade, vertical)</span>
         <div class="hero-badge"><b>Agenda aberta</b><small>consultas e procedimentos</small></div>
       </div>
     </div>
@@ -244,7 +246,7 @@
     <div class="about-photo">[FOTO_SOBRE] — foto no consultório</div>
     <div>
       <p class="eyebrow">Sobre a médica</p>
-      <h2 class="serif">{{NOME_COMPLETO}}</h2>
+      <h2 class="serif">Dra. Bianca Souza</h2>
       <p>[BIO] — Espaço para o texto do currículo da Bianca: formação, residência em Dermatologia, título de especialista, abordagem de atendimento e o que ela mais gosta de fazer (dermatologia clínica e cirúrgica — retirada de lesões, biópsias — além de procedimentos estéticos).</p>
       <p>Um atendimento próximo, que escuta e explica — do diagnóstico ao acompanhamento.</p>
       <ul class="creds">
@@ -331,7 +333,7 @@
       <p class="eyebrow" style="color:#e9d9b8">Vamos cuidar da sua pele</p>
       <h2 class="serif">Agende sua consulta</h2>
       <p>Atendimento por convênio e particular em São Paulo. Fale agora pelo WhatsApp ou deixe seus dados que entramos em contato.</p>
-      <a class="btn btn-wa" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+      <a class="btn btn-wa" href="https://wa.me/553182187822?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
         <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
         Falar no WhatsApp
       </a>
@@ -371,12 +373,12 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="brand" style="font-size:20px;font-weight:700">{{NOME_COMPLETO}}</div>
+        <div class="brand" style="font-size:20px;font-weight:700">Dra. Bianca Souza</div>
         <p style="margin-top:10px;opacity:.85">Dermatologia clínica, cirúrgica e estética em São Paulo. Atendimento por convênio e particular.</p>
       </div>
       <div>
         <h4>Contato</h4>
-        <p><a href="https://wa.me/{{WHATSAPP_NUM}}" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p><a href="https://wa.me/553182187822" target="_blank" rel="noopener">WhatsApp</a></p>
         <p><a href="https://instagram.com/{{INSTAGRAM_USER}}" target="_blank" rel="noopener">Instagram @{{INSTAGRAM_USER}}</a></p>
         <p>{{ENDERECO}}</p>
       </div>
@@ -388,13 +390,13 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>{{NOME_COMPLETO}} · {{CRM}} · {{RQE}}</span>
-      <span>Responsável técnica: {{NOME_COMPLETO}} — {{CRM}}</span>
+      <span>Dra. Bianca Souza · {{CRM}} · {{RQE}}</span>
+      <span>Responsável técnica: Dra. Bianca Souza — {{CRM}}</span>
     </div>
   </div>
 </footer>
 
 <!-- WHATSAPP FLUTUANTE -->
-<a class="wa-float" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa-float" href="https://wa.me/553182187822?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
 </a>
