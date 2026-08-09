@@ -218,9 +218,10 @@ vistoria**, não a taxa. Valor exato: confirmar com a **COVISA** (Av. Dr. Arnald
 ## Próximos passos — caminho coworking (decidido)
 
 ### A. Regulatório e fiscal (caminho crítico — começa já)
-1. **CREMESP** — inscrição secundária da Bianca + adequação da **PJ** pra operar
-   em SP (pedir o **Certificado de Regularidade no CRM-MG**). É o gargalo; RQE +
-   Título destravam o credenciamento depois.
+1. **CREMESP** — ✅ **RESOLVIDO pra pessoa física**: a Bianca já tem
+   **CREMESP 286882 · RQE 151282** (além do CRM-MG 83896 · RQE 70523), conforme
+   o currículo. Falta só a **adequação/registro da PJ** no CREMESP pra operar em
+   SP — o gargalo encolheu muito.
 2. **Inscrição Municipal (CCM) na Prefeitura de SP** — pra emitir nota fiscal de
    serviço e recolher **ISS** em SP (a PJ é de MG). Confirmar com o contador.
 3. **Fechar o coworking em Vila Mariana** — assinar só depois de confirmar:

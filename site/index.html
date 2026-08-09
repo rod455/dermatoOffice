@@ -2,20 +2,16 @@
   ============================================================================
   LP DRA. BIANCA — DERMATOLOGIA  (template DermatoOffice / AppFactory)
   ============================================================================
-  COMO USAR: troque todos os campos entre {{CHAVES}} e os blocos [PLACEHOLDER].
-  Lista do que preencher depois (fotos, currículo, dados):
+  DADOS JÁ PREENCHIDOS: nome, CRM-SP 286882/RQE 151282 (+ CRM-MG), bio do
+  currículo, WhatsApp 553182187822.
 
-    Dra. Bianca Souza        -> ex.: Dra. Bianca Souza
-    {{CRM}}                  -> ex.: CRM-SP 123456   (obrigatório p/ CFM)
-    {{RQE}}                  -> ex.: RQE 45678       (obrigatório p/ especialista)
-    553182187822         -> só dígitos, ex.: 5511999999999  (telefone comercial)
-    {{INSTAGRAM_USER}}       -> ex.: dra.biancaderm
-    {{ENDERECO}}             -> ex.: Rua X, 000 - Vila Mariana, São Paulo/SP
-    {{ANOS_EXPERIENCIA}}     -> ex.: 8
-    [FOTO_HERO]              -> foto da Bianca (retrato, alta qualidade)
-    [FOTO_SOBRE]             -> foto da Bianca no consultório
-    [BIO]                    -> texto do currículo/bio dela
-    [DEPOIMENTOS]            -> depoimentos REAIS e autorizados (ver nota CFM abaixo)
+  AINDA FALTA (procurar os TODOs no código):
+    [FOTO_HERO]   -> foto da Bianca (retrato vertical) — trocar o monograma
+    [FOTO_SOBRE]  -> foto no consultório — trocar o monograma
+    Endereço      -> rua/número quando fechar o coworking (FAQ, Localização, rodapé, mapa)
+    Instagram     -> @ profissional quando criado (rodapé)
+    Depoimentos   -> reais e autorizados (seção comentada)
+    noindex       -> remover a meta robots quando os itens acima estiverem ok
 
   CFM (publicidade médica): sem promessa/garantia de resultado; sem antes/depois
   sensacionalista; nome + CRM/RQE visíveis; depoimento só com autorização.
@@ -23,7 +19,7 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dra. Bianca — Dermatologia | São Paulo</title>
+<title>Dra. Bianca Souza — Dermatologista | São Paulo</title>
 <meta name="description" content="Dermatologia clínica, cirúrgica e estética em São Paulo. Atendimento por convênio e particular. Agende pelo WhatsApp.">
 
 <!-- ATENÇÃO: enquanto a LP tem placeholders, mantemos noindex pra o Google não
@@ -37,7 +33,7 @@
 <!-- Open Graph (aparência ao compartilhar no WhatsApp/Instagram/Facebook) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Dra. Bianca — Dermatologia em São Paulo">
+<meta property="og:title" content="Dra. Bianca Souza — Dermatologista em São Paulo">
 <meta property="og:description" content="Dermatologia clínica, cirúrgica e estética. Convênio e particular. Agende pelo WhatsApp.">
 <!-- TODO: og:url e og:image (imagem 1200x630) quando o domínio e a foto estiverem definidos -->
 <meta name="theme-color" content="#0f5b52">
@@ -209,7 +205,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Dermatologista • CRM-SP • RQE</p>
+      <p class="eyebrow">Dermatologista · CRM-SP 286882 · RQE 151282</p>
       <h1 class="serif">Cuidado com a sua pele, <em>do clínico ao estético</em>, com quem entende.</h1>
       <p class="lead">Dermatologia clínica, cirúrgica e estética em São Paulo. Atendimento humano, agenda organizada e agendamento fácil pelo WhatsApp — por convênio ou particular.</p>
       <div class="hero-cta">
@@ -221,11 +217,9 @@
       </div>
       <p style="font-size:13px;color:var(--ink-soft);margin:-14px 0 26px;opacity:.85">✓ Resposta rápida &nbsp;·&nbsp; ✓ Convênio e particular &nbsp;·&nbsp; ✓ Lembrete antes da consulta</p>
       <div class="trust">
-        <div><b>Título</b>de especialista (SBD)</div>
-        <div><b>RQE</b>registro de qualificação</div>
-        <!-- TODO: reativar quando tivermos o dado real
-        <div><b>+{{ANOS_EXPERIENCIA}}</b>anos de experiência</div> -->
-        <div><b>SP</b>atendimento em São Paulo</div>
+        <div><b>RQE 151282</b>especialista registrada</div>
+        <div><b>Residência</b>Hospital Federal de Bonsucesso</div>
+        <div><b>+6 anos</b>de medicina</div>
       </div>
     </div>
     <div>
@@ -254,17 +248,17 @@
 <section id="sobre" class="about">
   <div class="wrap about-grid">
     <!-- Ao receber a foto: substituir por <img src="foto-sobre.jpg" alt="Dra. Bianca Souza no consultório" style="width:100%;height:100%;object-fit:cover"> -->
-    <div class="about-photo"><div class="monogram">B.<small>CRM-SP · RQE</small></div></div>
+    <div class="about-photo"><div class="monogram">B.<small>CRM-SP 286882 · RQE 151282</small></div></div>
     <div>
       <p class="eyebrow">Sobre a médica</p>
       <h2 class="serif">Dra. Bianca Souza</h2>
-      <p>[BIO] — Espaço para o texto do currículo da Bianca: formação, residência em Dermatologia, título de especialista, abordagem de atendimento e o que ela mais gosta de fazer (dermatologia clínica e cirúrgica — retirada de lesões, biópsias — além de procedimentos estéticos).</p>
-      <p>Um atendimento próximo, que escuta e explica — do diagnóstico ao acompanhamento.</p>
+      <p>Médica dermatologista com formação pela residência em Dermatologia do <b>Hospital Federal de Bonsucesso</b> e graduação em Medicina pela <b>PUC Minas</b>. Atua em dermatologia clínica, cirúrgica e estética, com experiência em atendimento ambulatorial e hospitalar de alta demanda.</p>
+      <p>No consultório, o foco é diagnóstico preciso e cuidado integral: do acompanhamento clínico e da avaliação de pintas e lesões — incluindo biópsias, crioterapia e exérese — aos procedimentos estéticos como toxina botulínica, bioestimuladores, peelings químicos e preenchedores, com especialização em Cosmiatria. Um atendimento próximo, que escuta e explica, do diagnóstico ao acompanhamento.</p>
       <ul class="creds">
-        <li>Médica dermatologista — <b>{{CRM}}</b> · <b>{{RQE}}</b></li>
-        <li>Título de especialista pela Sociedade Brasileira de Dermatologia</li>
-        <li>Dermatologia clínica, cirúrgica e estética</li>
-        <li>Atendimento por convênio e particular em São Paulo</li>
+        <li>Médica dermatologista — <b>CRM-SP 286882 · RQE 151282</b> (e CRM-MG 83896 · RQE 70523)</li>
+        <li>Residência Médica em Dermatologia — Hospital Federal de Bonsucesso</li>
+        <li>Especialização em Cosmiatria</li>
+        <li>Dermatologia clínica, cirúrgica e estética — convênio e particular em São Paulo</li>
       </ul>
     </div>
   </div>
@@ -347,7 +341,7 @@
       <details open><summary>Atende por convênio?</summary><p>Sim. O atendimento é feito por convênio (SulAmérica, Bradesco Saúde e outros — consulte) e também particular. Chame no WhatsApp para confirmar o seu plano.</p></details>
       <details><summary>Como funciona o agendamento?</summary><p>Pelo WhatsApp, de forma simples e rápida. Você recebe confirmação e um lembrete antes da consulta.</p></details>
       <details><summary>Faz remoção de pintas e biópsia?</summary><p>Sim, a Dra. realiza dermatologia cirúrgica — retirada de lesões, pintas e biópsias — sempre com avaliação individual.</p></details>
-      <details><summary>Onde fica o consultório?</summary><p>Em {{ENDERECO}}. Veja a localização mais abaixo.</p></details>
+      <details><summary>Onde fica o consultório?</summary><p>Em Vila Mariana, São Paulo/SP — endereço completo em breve. Veja a localização mais abaixo.</p></details>
       <details><summary>Faz procedimentos estéticos?</summary><p>Sim — peelings, toxina, preenchimento e outros, com protocolo individualizado e foco em naturalidade.</p></details>
     </div>
   </div>
@@ -415,7 +409,7 @@
     <div class="head-center">
       <p class="eyebrow">Onde encontrar</p>
       <h2 class="serif">Localização</h2>
-      <p>{{ENDERECO}}</p>
+      <p>Vila Mariana, São Paulo/SP — endereço completo em breve</p>
     </div>
     <!-- Ao definir o endereço: substituir pelo iframe do Google Maps embed -->
     <div style="border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/6;background:linear-gradient(135deg,var(--green-l),var(--sand));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--green-d)">
@@ -437,8 +431,9 @@
       <div>
         <h4>Contato</h4>
         <p><a href="https://wa.me/553182187822" target="_blank" rel="noopener">WhatsApp</a></p>
-        <p><a href="https://instagram.com/{{INSTAGRAM_USER}}" target="_blank" rel="noopener">Instagram @{{INSTAGRAM_USER}}</a></p>
-        <p>{{ENDERECO}}</p>
+        <!-- TODO: adicionar o @ do Instagram profissional quando criado -->
+        <p>Instagram profissional em breve</p>
+        <p>Vila Mariana, São Paulo/SP — endereço completo em breve</p>
       </div>
       <div>
         <h4>Institucional</h4>
@@ -448,8 +443,8 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>Dra. Bianca Souza · {{CRM}} · {{RQE}}</span>
-      <span>Responsável técnica: Dra. Bianca Souza — {{CRM}}</span>
+      <span>Dra. Bianca Souza · CRM-SP 286882 · RQE 151282</span>
+      <span>Responsável técnica: Dra. Bianca Souza — CRM-SP 286882</span>
     </div>
   </div>
 </footer>
