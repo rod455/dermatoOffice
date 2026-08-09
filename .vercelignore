@@ -1,0 +1,5 @@
+# Só a landing page (site/) vai ao ar. Tudo abaixo NÃO é enviado à Vercel —
+# mantém os documentos internos de estratégia fora do deploy público.
+docs/
+README.md
+*.md
