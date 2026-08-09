@@ -34,7 +34,89 @@ jeito certo.
 5. **Recompra / reativação** (fase posterior, com opt-in) → paciente que sumiu,
    oferta de retorno. **Só com consentimento** — ver doc de marketing/LGPD.
 
-## Arquitetura sugerida
+## v0 — Evolution API + IA (decidido: começar por aqui)
+
+Pra validar rápido sem esperar a burocracia da API oficial, o v0 roda com
+**Evolution API** (open-source, self-hosted) pareada com o número comercial
+existente (+55 31 8218-7822), como um "WhatsApp Web programável".
+
+### Por que faz sentido agora
+- **Zero fricção com o número atual** — pareia via QR code com a conta Business
+  que já existe; o app continua funcionando no celular em paralelo (multi-device).
+  A Bianca/secretária vê tudo e pode assumir qualquer conversa.
+- **Custo quase zero** — software livre; só a VPS (~R$30–60/mês).
+- **Aprendizado real** — vemos os padrões de mensagem/no-show reais antes de
+  investir na migração oficial.
+
+### O risco, dito com todas as letras
+Evolution usa o protocolo do WhatsApp Web — **não é oficial**. A Meta pode
+**banir o número** se detectar automação, especialmente disparo em massa.
+Regras de convivência pra reduzir o risco a quase nada:
+1. **Só conversa 1:1 e responsiva** — responder quem chama, confirmar consulta
+   de quem já agendou. **NUNCA disparo em massa/marketing** pelo Evolution.
+2. Número já "quente" (conta ativa, com histórico) — ✔ é o caso.
+3. Ritmo humano: delays entre mensagens, sem rajadas.
+4. **Plano de migração pra API oficial** já no roadmap (quando tiver volume ou
+   formos fazer campanhas). Marketing em massa **só** na oficial, com opt-in.
+
+### Arquitetura v0
+
+```
+Paciente ──► WhatsApp (+55 31 8218-7822)
+                 │  (pareado via QR)
+                 ▼
+          Evolution API (VPS)
+                 │  webhook (mensagem recebida)
+                 ▼
+               n8n ──────────────────────────────┐
+                 │                               │
+                 ▼                               ▼
+          Claude (IA)                     Integrações
+      classifica intenção            ├─ Agenda (Google Calendar no v0)
+      e redige a resposta            ├─ CRM (Supabase no v0)
+                                     └─ Notificação p/ humano (handoff)
+```
+
+### O fluxo de conversa (máquina de estados)
+
+**1. Triagem (toda mensagem que chega)** — a IA classifica a intenção:
+`agendar` · `confirmar` · `remarcar/cancelar` · `dúvida` · `humano` · `fora de escopo`
+
+**2. Agendar** — coleta em conversa natural: nome → convênio ou particular →
+- *Convênio:* orienta o agendamento pelo app da operadora (regra do plano) e
+  registra o lead no CRM pra acompanhar.
+- *Particular:* oferece 2–3 horários livres da agenda → paciente escolhe →
+  grava na agenda + CRM → mensagem de confirmação.
+
+**3. Confirmação/lembrete (proativo, o anti no-show)** — cron no n8n:
+- 48h antes: "confirma sua consulta?" (sim / preciso remarcar)
+- 3h antes: lembrete curto com endereço.
+- Sem resposta na véspera → alerta pra secretária ligar.
+
+**4. Remarcar/cancelar** — oferece novos horários; se cancelou, o horário entra
+na **fila de encaixe** (oferece pra lista de espera).
+
+**5. Dúvidas (a IA responde)** — endereço, convênios aceitos, como funciona,
+preparo pra consulta. **Guardrails inegociáveis:**
+- Se identifica sempre como assistente virtual da clínica.
+- **NUNCA responde pergunta clínica** ("essa pinta é perigosa?", "que remédio
+  tomo?") → resposta padrão: "isso é com a Dra. na consulta" + oferece agendar.
+- Nunca promete resultado; não fala de preço de procedimento estético sem a
+  Bianca ter definido a política.
+- LGPD: registra o opt-in na primeira conversa; comando "SAIR" descadastra.
+
+**6. Handoff (pra humano)** — gatilhos: pedido explícito, urgência/dor,
+reclamação, 2 falhas seguidas de entendimento, qualquer coisa clínica →
+notifica a Bianca/secretária e a IA **silencia naquela conversa** até liberar.
+
+### Roadmap
+| Fase | Canal | O que roda |
+|------|-------|-----------|
+| **v0 (agora)** | Evolution + número atual | Triagem IA, agendamento particular, confirmação/lembrete, dúvidas, handoff |
+| **v1** | API oficial Meta (Cloud API) | Migra quando: volume alto, campanhas de marketing (opt-in), ou qualquer sinal de risco no número. Número 11 dedicado a avaliar |
+| **v2** | + Plataforma do médico | CRM alimentado por voz/foto dispara os fluxos (retorno, reativação) |
+
+## Arquitetura oficial (v1) — referência
 
 Duas peças que já estão disponíveis neste ambiente:
 
