@@ -1,0 +1,384 @@
+<!--
+  ============================================================================
+  LP DRA. BIANCA — DERMATOLOGIA  (template DermatoOffice / AppFactory)
+  ============================================================================
+  COMO USAR: troque todos os campos entre {{CHAVES}} e os blocos [PLACEHOLDER].
+  Lista do que preencher depois (fotos, currículo, dados):
+
+    {{NOME_COMPLETO}}        -> ex.: Dra. Bianca Souza
+    {{CRM}}                  -> ex.: CRM-SP 123456   (obrigatório p/ CFM)
+    {{RQE}}                  -> ex.: RQE 45678       (obrigatório p/ especialista)
+    {{WHATSAPP_NUM}}         -> só dígitos, ex.: 5511999999999  (telefone comercial)
+    {{INSTAGRAM_USER}}       -> ex.: dra.biancaderm
+    {{ENDERECO}}             -> ex.: Rua X, 000 - Vila Mariana, São Paulo/SP
+    {{ANOS_EXPERIENCIA}}     -> ex.: 8
+    [FOTO_HERO]              -> foto da Bianca (retrato, alta qualidade)
+    [FOTO_SOBRE]             -> foto da Bianca no consultório
+    [BIO]                    -> texto do currículo/bio dela
+    [DEPOIMENTOS]            -> depoimentos REAIS e autorizados (ver nota CFM abaixo)
+
+  CFM (publicidade médica): sem promessa/garantia de resultado; sem antes/depois
+  sensacionalista; nome + CRM/RQE visíveis; depoimento só com autorização.
+  ============================================================================
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Bianca — Dermatologia | São Paulo</title>
+<meta name="description" content="Dermatologia clínica, cirúrgica e estética em São Paulo. Atendimento por convênio e particular. Agende pelo WhatsApp.">
+
+<style>
+  :root{
+    --ink:#1f2a37; --ink-soft:#54606e; --line:#e9e4dc;
+    --bg:#ffffff; --cream:#faf7f2; --sand:#f0e9df;
+    --green:#0f5b52; --green-d:#0b463f; --green-l:#e7f1ee;
+    --gold:#b98a3e; --wa:#25d366;
+    --radius:16px; --max:1120px;
+    --font:'Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  .serif{font-family:Georgia,'Times New Roman',serif}
+  section{padding:74px 0}
+  h1,h2,h3{line-height:1.2;letter-spacing:-.01em}
+  .eyebrow{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:14px 24px;border-radius:999px;transition:.2s;cursor:pointer;border:0}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.28)}
+  .btn-wa:hover{filter:brightness(.96);transform:translateY(-1px)}
+  .btn-ghost{border:1.5px solid var(--green);color:var(--green);background:transparent}
+  .btn-ghost:hover{background:var(--green-l)}
+  .wa-ico{width:18px;height:18px;fill:currentColor}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-weight:700;font-size:20px;color:var(--green);letter-spacing:.02em}
+  .brand small{display:block;font-size:10px;letter-spacing:3px;color:var(--ink-soft);font-weight:600;text-transform:uppercase}
+  .menu{display:flex;gap:28px;font-size:14.5px;font-weight:600;color:var(--ink-soft)}
+  .menu a:hover{color:var(--green)}
+  .nav .btn{padding:11px 20px;font-size:14px}
+  @media(max-width:860px){.menu{display:none}}
+
+  /* HERO */
+  .hero{background:linear-gradient(180deg,var(--cream),#fff);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .hero h1{font-size:44px;color:var(--green-d);margin-bottom:18px}
+  .hero h1 em{color:var(--gold);font-style:normal}
+  .hero p.lead{font-size:18px;color:var(--ink-soft);margin-bottom:26px;max-width:520px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .trust{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+  .trust div{font-size:13px;color:var(--ink-soft)}
+  .trust b{display:block;font-size:20px;color:var(--green);font-family:Georgia,serif}
+  .hero-photo{position:relative;aspect-ratio:4/5;border-radius:24px;background:
+     linear-gradient(135deg,var(--green-l),var(--sand));
+     display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+  .hero-photo span{color:var(--green);opacity:.5;font-size:14px;text-align:center;padding:20px}
+  .hero-badge{position:absolute;bottom:-16px;left:-16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;box-shadow:0 12px 30px rgba(15,91,82,.12)}
+  .hero-badge b{color:var(--green);font-size:14px}
+  .hero-badge small{color:var(--ink-soft);font-size:12px;display:block}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:34px}.hero h1{font-size:34px}}
+
+  /* CONVÊNIOS BAR */
+  .conv{background:var(--green);color:#fff;padding:26px 0}
+  .conv .wrap{display:flex;align-items:center;justify-content:center;gap:16px 40px;flex-wrap:wrap;text-align:center}
+  .conv b{font-size:16px}
+  .conv .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600}
+
+  /* SOBRE */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+  .about-photo{aspect-ratio:1/1;border-radius:20px;background:linear-gradient(135deg,var(--sand),var(--green-l));display:flex;align-items:center;justify-content:center;border:1px solid var(--line);color:var(--green);opacity:.9;font-size:14px}
+  .about h2{font-size:32px;color:var(--green-d);margin-bottom:16px}
+  .about p{color:var(--ink-soft);margin-bottom:14px}
+  .creds{list-style:none;margin-top:18px;display:grid;gap:10px}
+  .creds li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+  .creds li::before{content:"✦";color:var(--gold);font-size:14px;margin-top:3px}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* TRATAMENTOS */
+  .treat{background:var(--cream)}
+  .head-center{text-align:center;max-width:640px;margin:0 auto 46px}
+  .head-center h2{font-size:32px;color:var(--green-d);margin-bottom:12px}
+  .head-center p{color:var(--ink-soft)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:.2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(15,91,82,.10)}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:var(--green-l);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+  .card h3{font-size:18px;color:var(--green-d);margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--ink-soft)}
+  @media(max-width:860px){.cards{grid-template-columns:1fr}}
+
+  /* PASSOS */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+  .step{position:relative;padding:28px 24px;border:1px dashed var(--line);border-radius:var(--radius);text-align:center}
+  .step .n{counter-increment:s;width:44px;height:44px;margin:0 auto 14px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .step .n::before{content:counter(s)}
+  .step h3{font-size:17px;color:var(--green-d);margin-bottom:6px}
+  .step p{font-size:14px;color:var(--ink-soft)}
+  @media(max-width:860px){.steps{grid-template-columns:1fr}}
+
+  /* DEPOIMENTOS */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .quote .stars{color:var(--gold);margin-bottom:10px}
+  .quote p{font-style:italic;color:var(--ink);margin-bottom:14px}
+  .quote b{color:var(--green-d);font-size:14px}
+  .note-cfm{margin-top:22px;text-align:center;font-size:12.5px;color:var(--ink-soft);opacity:.8}
+  @media(max-width:860px){.quotes{grid-template-columns:1fr}}
+
+  /* FAQ */
+  .faq-wrap{max-width:780px;margin:0 auto}
+  details{border:1px solid var(--line);border-radius:12px;padding:4px 20px;margin-bottom:12px;background:#fff}
+  details summary{font-weight:700;color:var(--green-d);padding:16px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  details summary::after{content:"+";color:var(--gold);font-size:22px}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--ink-soft);padding:0 0 16px}
+
+  /* CTA FINAL + FORM */
+  .cta{background:linear-gradient(135deg,var(--green),var(--green-d));color:#fff}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .cta h2{font-size:32px;margin-bottom:14px}
+  .cta p{opacity:.92;margin-bottom:22px}
+  .form{background:#fff;border-radius:var(--radius);padding:28px;color:var(--ink)}
+  .form label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px}
+  .form input,.form select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit}
+  .form .lgpd{display:flex;gap:9px;align-items:flex-start;margin:16px 0;font-size:12.5px;color:var(--ink-soft)}
+  .form .lgpd input{width:auto;margin-top:3px}
+  .form .btn{width:100%;justify-content:center;margin-top:6px}
+  @media(max-width:860px){.cta-grid{grid-template-columns:1fr;gap:28px}}
+
+  /* FOOTER */
+  footer{background:#0b2e2a;color:#cfe0dc;padding:50px 0 30px;font-size:14px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:30px}
+  footer h4{color:#fff;font-size:15px;margin-bottom:14px}
+  footer a{color:#cfe0dc}footer a:hover{color:#fff}
+  footer .brand{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:12.5px;opacity:.8;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr}}
+
+  /* WHATSAPP FLUTUANTE */
+  .wa-float{position:fixed;bottom:22px;right:22px;z-index:60;background:var(--wa);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.42);animation:pulse 2.4s infinite}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+</style>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="wrap nav">
+    <div class="brand">{{NOME_COMPLETO}}<small>Dermatologia</small></div>
+    <nav class="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#convenios">Convênios</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#local">Localização</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+      <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
+      Agendar
+    </a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Dermatologista • CRM-SP • RQE</p>
+      <h1 class="serif">Cuidado com a sua pele, <em>do clínico ao estético</em>, com quem entende.</h1>
+      <p class="lead">Dermatologia clínica, cirúrgica e estética em São Paulo. Atendimento humano, agenda organizada e agendamento fácil pelo WhatsApp — por convênio ou particular.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+          <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#tratamentos">Ver tratamentos</a>
+      </div>
+      <div class="trust">
+        <div><b>Título</b>de especialista (SBD)</div>
+        <div><b>RQE</b>registro de qualificação</div>
+        <div><b>+{{ANOS_EXPERIENCIA}}</b>anos de experiência</div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-photo">
+        <span>[FOTO_HERO]<br>retrato da {{NOME_COMPLETO}}<br>(alta qualidade, vertical)</span>
+        <div class="hero-badge"><b>Agenda aberta</b><small>consultas e procedimentos</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONVÊNIOS ===================== -->
+<div class="conv" id="convenios">
+  <div class="wrap">
+    <b>Atende por convênio e particular:</b>
+    <span class="chip">SulAmérica</span>
+    <span class="chip">Bradesco Saúde</span>
+    <span class="chip">Particular</span>
+    <span class="chip">Outros — consulte</span>
+  </div>
+</div>
+
+<!-- ===================== SOBRE ===================== -->
+<section id="sobre" class="about">
+  <div class="wrap about-grid">
+    <div class="about-photo">[FOTO_SOBRE] — foto no consultório</div>
+    <div>
+      <p class="eyebrow">Sobre a médica</p>
+      <h2 class="serif">{{NOME_COMPLETO}}</h2>
+      <p>[BIO] — Espaço para o texto do currículo da Bianca: formação, residência em Dermatologia, título de especialista, abordagem de atendimento e o que ela mais gosta de fazer (dermatologia clínica e cirúrgica — retirada de lesões, biópsias — além de procedimentos estéticos).</p>
+      <p>Um atendimento próximo, que escuta e explica — do diagnóstico ao acompanhamento.</p>
+      <ul class="creds">
+        <li>Médica dermatologista — <b>{{CRM}}</b> · <b>{{RQE}}</b></li>
+        <li>Título de especialista pela Sociedade Brasileira de Dermatologia</li>
+        <li>Dermatologia clínica, cirúrgica e estética</li>
+        <li>Atendimento por convênio e particular em São Paulo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRATAMENTOS ===================== -->
+<section id="tratamentos" class="treat">
+  <div class="wrap">
+    <div class="head-center">
+      <p class="eyebrow">Áreas de atuação</p>
+      <h2 class="serif">Tratamentos e procedimentos</h2>
+      <p>Do cuidado clínico da sua pele à remoção de lesões e aos procedimentos estéticos.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ic">🩺</div><h3>Dermatologia clínica</h3><p>Consulta e acompanhamento de acne, manchas, queda de cabelo, dermatites, unhas e saúde da pele em geral.</p></div>
+      <div class="card"><div class="ic">🔬</div><h3>Prevenção do câncer de pele</h3><p>Avaliação de pintas e lesões, dermatoscopia e orientação — o cuidado que salva.</p></div>
+      <div class="card"><div class="ic">✂️</div><h3>Dermatologia cirúrgica</h3><p>Retirada de pintas e lesões, biópsias e pequenos procedimentos com segurança.</p></div>
+      <div class="card"><div class="ic">💧</div><h3>Peelings</h3><p>Renovação da pele para manchas, textura e viço, com protocolo individualizado.</p></div>
+      <div class="card"><div class="ic">✨</div><h3>Toxina e preenchimento</h3><p>Procedimentos estéticos para harmonização e rejuvenescimento, com naturalidade.</p></div>
+      <div class="card"><div class="ic">💆</div><h3>Cuidados com o cabelo e couro cabeludo</h3><p>Investigação e tratamento de queda capilar e do couro cabeludo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMO FUNCIONA ===================== -->
+<section>
+  <div class="wrap">
+    <div class="head-center">
+      <p class="eyebrow">Simples e rápido</p>
+      <h2 class="serif">Como agendar</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n"></div><h3>Chame no WhatsApp</h3><p>Um toque no botão e você fala direto com o atendimento.</p></div>
+      <div class="step"><div class="n"></div><h3>Escolha o horário</h3><p>A gente encontra o melhor dia — convênio ou particular.</p></div>
+      <div class="step"><div class="n"></div><h3>Confirmação e lembrete</h3><p>Você recebe a confirmação e um lembrete antes da consulta.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEPOIMENTOS ===================== -->
+<section class="treat">
+  <div class="wrap">
+    <div class="head-center">
+      <p class="eyebrow">Quem já foi atendido</p>
+      <h2 class="serif">Experiências de pacientes</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote"><div class="stars">★★★★★</div><p>[DEPOIMENTO 1 — texto real e autorizado do paciente]</p><b>— Paciente, São Paulo</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>[DEPOIMENTO 2 — texto real e autorizado do paciente]</p><b>— Paciente, São Paulo</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>[DEPOIMENTO 3 — texto real e autorizado do paciente]</p><b>— Paciente, São Paulo</b></div>
+    </div>
+    <p class="note-cfm">Depoimentos publicados apenas com autorização do paciente, conforme as normas do Conselho Federal de Medicina.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="head-center">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2 class="serif">Tire suas dúvidas</h2>
+    </div>
+    <div class="faq-wrap">
+      <details open><summary>Atende por convênio?</summary><p>Sim. O atendimento é feito por convênio (SulAmérica, Bradesco Saúde e outros — consulte) e também particular. Chame no WhatsApp para confirmar o seu plano.</p></details>
+      <details><summary>Como funciona o agendamento?</summary><p>Pelo WhatsApp, de forma simples e rápida. Você recebe confirmação e um lembrete antes da consulta.</p></details>
+      <details><summary>Faz remoção de pintas e biópsia?</summary><p>Sim, a Dra. realiza dermatologia cirúrgica — retirada de lesões, pintas e biópsias — sempre com avaliação individual.</p></details>
+      <details><summary>Onde fica o consultório?</summary><p>Em {{ENDERECO}}. Veja a localização mais abaixo.</p></details>
+      <details><summary>Faz procedimentos estéticos?</summary><p>Sim — peelings, toxina, preenchimento e outros, com protocolo individualizado e foco em naturalidade.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA + FORM ===================== -->
+<section class="cta">
+  <div class="wrap cta-grid">
+    <div>
+      <p class="eyebrow" style="color:#e9d9b8">Vamos cuidar da sua pele</p>
+      <h2 class="serif">Agende sua consulta</h2>
+      <p>Atendimento por convênio e particular em São Paulo. Fale agora pelo WhatsApp ou deixe seus dados que entramos em contato.</p>
+      <a class="btn btn-wa" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+    <form class="form" onsubmit="return false">
+      <label>Nome</label>
+      <input type="text" placeholder="Seu nome completo">
+      <label>WhatsApp</label>
+      <input type="tel" placeholder="(11) 90000-0000">
+      <label>Atendimento</label>
+      <select><option>Convênio</option><option>Particular</option><option>Não sei / outro</option></select>
+      <div class="lgpd">
+        <input type="checkbox" id="optin">
+        <label for="optin" style="margin:0;font-weight:400">Autorizo o contato pelo WhatsApp e o uso dos meus dados para agendamento, conforme a Política de Privacidade (LGPD).</label>
+      </div>
+      <button class="btn btn-wa">Quero agendar</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== LOCALIZAÇÃO ===================== -->
+<section id="local">
+  <div class="wrap">
+    <div class="head-center">
+      <p class="eyebrow">Onde encontrar</p>
+      <h2 class="serif">Localização</h2>
+      <p>{{ENDERECO}}</p>
+    </div>
+    <div style="border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/6;background:var(--sand);display:flex;align-items:center;justify-content:center;color:var(--ink-soft)">
+      [MAPA — inserir Google Maps embed do endereço]
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="font-size:20px;font-weight:700">{{NOME_COMPLETO}}</div>
+        <p style="margin-top:10px;opacity:.85">Dermatologia clínica, cirúrgica e estética em São Paulo. Atendimento por convênio e particular.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><a href="https://wa.me/{{WHATSAPP_NUM}}" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p><a href="https://instagram.com/{{INSTAGRAM_USER}}" target="_blank" rel="noopener">Instagram @{{INSTAGRAM_USER}}</a></p>
+        <p>{{ENDERECO}}</p>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <p><a href="#sobre">Sobre a médica</a></p>
+        <p><a href="#tratamentos">Tratamentos</a></p>
+        <p><a href="#">Política de Privacidade (LGPD)</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>{{NOME_COMPLETO}} · {{CRM}} · {{RQE}}</span>
+      <span>Responsável técnica: {{NOME_COMPLETO}} — {{CRM}}</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a class="wa-float" href="https://wa.me/{{WHATSAPP_NUM}}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>
+</a>
