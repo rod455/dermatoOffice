@@ -109,6 +109,21 @@ preparo pra consulta. **Guardrails inegociáveis:**
 reclamação, 2 falhas seguidas de entendimento, qualquer coisa clínica →
 notifica a Bianca/secretária e a IA **silencia naquela conversa** até liberar.
 
+### ✅ Status de implementação (v0 construída)
+
+| Peça | Onde | Status |
+|------|------|--------|
+| Workflow **Dermato — Recepção WhatsApp (IA)** | n8n (`IoFIkNkaaD3q8bQi`) | Criado e **publicado** — webhook `/webhook/dermato-recepcao` no ar |
+| Workflow **Dermato — Setup instância Evolution** | n8n (`LmkmJFGTnIrqHVDp`) | Criado — executar manualmente pra gerar o QR |
+| Data Table **dermato_conversas** (histórico/CRM v0) | n8n Data Tables | Criada (number, name, text_in, reply, intent, handoff) |
+| Instância Evolution `dermato-bianca` | Servidor Evolution existente (mesmo do Vocaboost) | **Pendente**: rodar o setup + parear o QR no celular da Bianca |
+
+O fluxo implementado: webhook → extrai mensagem (ignora grupos/próprias) →
+busca histórico da conversa na Data Table → Claude responde com memória e
+guardrails (JSON: reply/intent/handoff) → registra no histórico → envia a
+resposta → se handoff, notifica a equipe no WhatsApp. `SAIR` = opt-out
+registrado (LGPD) e a IA silencia pra sempre naquele número.
+
 ### Roadmap
 | Fase | Canal | O que roda |
 |------|-------|-----------|
